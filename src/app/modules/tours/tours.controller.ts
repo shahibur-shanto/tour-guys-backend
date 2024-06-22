@@ -2,11 +2,12 @@ import { NextFunction, Request, Response } from "express";
 import { createToursToDB } from "./tours.service";
 import { v2 as cloudinary } from "cloudinary";
 import { UploadedFile } from "express-fileupload";
+require("dotenv").config();
 
 cloudinary.config({
-	cloud_name: "dmam6uulx",
-	api_key: "348146485332311",
-	api_secret: "SDVeWiLR2isjvO9x_oVqmsnyu78",
+	cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+	api_key: process.env.CLOUDINARY_API_KEY,
+	api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
 export const createTours = async (
@@ -14,6 +15,11 @@ export const createTours = async (
 	res: Response,
 	next: NextFunction
 ) => {
+	console.log({
+		cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+		api_key: process.env.CLOUDINARY_API_KEY,
+		api_secret: process.env.CLOUDINARY_API_SECRET,
+	});
 	const file = Array.isArray(req.files.photo)
 		? (req.files.photo[0] as UploadedFile)
 		: (req.files.photo as UploadedFile);
