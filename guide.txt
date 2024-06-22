@@ -1,0 +1,11 @@
+first install type script: npm install typescript --save-dev
+
+express install: npm install express --save
+
+
+mongoose install: npm install mongoose --save
+
+install ts_node_dev for run the code: npm i ts-node-dev
+
+
+install cors: npm install cors

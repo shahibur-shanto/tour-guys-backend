@@ -1,0 +1,8 @@
+{
+	"compilerOptions": {
+		"target": "es2018",
+		"module": "NodeNext", // Ensure this matches the error message requirements
+		"moduleResolution": "NodeNext" // Set or remove this to align with 'NodeNext' module
+		// other options...
+	}
+}

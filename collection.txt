@@ -1,0 +1,36 @@
+user:
+
+{
+  "username"    : String,
+  "password"    : String (hashed),
+  "email"       : String,
+  "role"        : String (guide or tourist),
+  "profile"     :
+  
+   {
+    "name"          : String,
+    "age"           : Number,
+    "bio"           : String (for guides),
+    "experience"    : String (for guides),
+    "photo"         : String (URL to profile photo)
+  }
+}
+
+
+
+tours:
+
+{
+  "title": String,
+  "description": String,
+  "city": String,
+  "country": String,
+  "transportation":String,
+  "duration": Number (in days),
+  "price": Number,
+  gallerys:
+  {
+    gallery:[]
+  }
+  
+}
