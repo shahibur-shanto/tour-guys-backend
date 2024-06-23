@@ -89,14 +89,13 @@ export const searchUser = async (
 	});
 };
 
-
 export const searchSingleQuery = async (
 	req: Request,
 	res: Response,
 	next: NextFunction
 ) => {
 	const filters = req.query as unknown as UserFilters;
-	const users = await searchQueryFromDB(filters);
+	const users = await searchQueryFromDB(filters as any);
 	res.status(200).json({
 		status: "success",
 		data: users,

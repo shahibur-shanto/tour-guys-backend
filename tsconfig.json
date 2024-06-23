@@ -2,7 +2,14 @@
 	"compilerOptions": {
 		"target": "es2018",
 		"module": "NodeNext", // Ensure this matches the error message requirements
-		"moduleResolution": "NodeNext" // Set or remove this to align with 'NodeNext' module
+		"moduleResolution": "NodeNext", // Set or remove this to align with 'NodeNext' module
+		"rootDir": "./src",
+		"outDir": "./dist",
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true
 		// other options...
-	}
+	},
+	"include": ["src"],
+	"exclude": ["node_modules"]
 }
