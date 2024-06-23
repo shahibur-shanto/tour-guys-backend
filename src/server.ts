@@ -6,7 +6,7 @@ const port = 5000;
 async function db_connect() {
 	try {
 		await mongoose.connect(
-			"mongodb+srv://shanto:LOVTI7JSQnnYAtWb@cluster0.qxopl.mongodb.net/tour-guys-bd?retryWrites=true&w=majority&appName=Cluster0"
+			"mongodb+srv://my-book:gOBQ03IJT8rKkg5p@cluster0.qxopl.mongodb.net/tour-guys-bd?retryWrites=true&w=majority&appName=Cluster0"
 			// "mongodb://127.0.0.1:27017/test"
 		);
 		app.listen(port, () => {
